@@ -1,0 +1,43 @@
+{
+  "version": "2.0",
+  "scenarioId": "coronary_default_success",
+  "mode": "guided",
+  "vessel": {
+    "preset": "lad_basic",
+    "diameterScale": 1,
+    "curveVariant": "mild"
+  },
+  "clot": {
+    "size": 0.62,
+    "position": 0.58,
+    "occlusionFraction": 0.68
+  },
+  "injection": {
+    "point": 0.18
+  },
+  "flow": {
+    "speed": 0.85,
+    "pulseEnabled": false
+  },
+  "swarm": {
+    "visibleCount": 320,
+    "effectiveSwarmFactor": 0.72,
+    "concentrationFactor": 0.65,
+    "cohesionGain": 0.55,
+    "coordinationGain": 0.6
+  },
+  "field": {
+    "strength": 0.7,
+    "directionDeg": 18,
+    "localizationAssist": 0.75,
+    "corkscrewIntensity": 0.4
+  },
+  "view": {
+    "camera": "overview",
+    "overlay": "clean"
+  },
+  "playback": {
+    "speed": 1
+  },
+  "seed": 42
+}

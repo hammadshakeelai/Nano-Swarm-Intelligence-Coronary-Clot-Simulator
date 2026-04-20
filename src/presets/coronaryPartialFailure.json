@@ -1,0 +1,43 @@
+{
+  "version": "2.0",
+  "scenarioId": "coronary_partial_failure",
+  "mode": "guided",
+  "vessel": {
+    "preset": "lad_partial",
+    "diameterScale": 0.94,
+    "curveVariant": "straight"
+  },
+  "clot": {
+    "size": 0.78,
+    "position": 0.63,
+    "occlusionFraction": 0.82
+  },
+  "injection": {
+    "point": 0.16
+  },
+  "flow": {
+    "speed": 0.92,
+    "pulseEnabled": true
+  },
+  "swarm": {
+    "visibleCount": 240,
+    "effectiveSwarmFactor": 0.46,
+    "concentrationFactor": 0.44,
+    "cohesionGain": 0.38,
+    "coordinationGain": 0.34
+  },
+  "field": {
+    "strength": 0.42,
+    "directionDeg": 10,
+    "localizationAssist": 0.38,
+    "corkscrewIntensity": 0.22
+  },
+  "view": {
+    "camera": "overview",
+    "overlay": "clean"
+  },
+  "playback": {
+    "speed": 1
+  },
+  "seed": 314
+}

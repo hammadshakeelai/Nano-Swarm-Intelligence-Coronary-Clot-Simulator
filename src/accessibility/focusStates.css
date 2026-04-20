@@ -1,0 +1,194 @@
+:root {
+  --focus-ring-color: #f6fc9d;
+  --focus-ring-shadow: rgba(246, 252, 157, 0.32);
+  --contrast-line: rgba(236, 255, 251, 0.22);
+  --status-ok-bg: rgba(73, 173, 122, 0.16);
+  --status-ok-line: rgba(73, 173, 122, 0.45);
+  --status-warn-bg: rgba(255, 184, 107, 0.14);
+  --status-warn-line: rgba(255, 184, 107, 0.44);
+  --status-alert-bg: rgba(255, 129, 100, 0.16);
+  --status-alert-line: rgba(255, 129, 100, 0.48);
+}
+
+.ghost-button,
+.action-button,
+.select-control select,
+.number-input,
+.toggle-row,
+.toggle-row input,
+.control input[type="range"],
+#timeline-scrubber,
+.modal-card button {
+  min-height: 44px;
+}
+
+.ghost-button,
+.action-button,
+.select-control select,
+.number-input,
+.toggle-row,
+.control input[type="range"],
+#timeline-scrubber {
+  touch-action: manipulation;
+}
+
+.toggle-row {
+  border-radius: 14px;
+  border: 1px solid transparent;
+  padding-inline: 10px;
+}
+
+.ghost-button:focus-visible,
+.action-button:focus-visible,
+.select-control select:focus-visible,
+.number-input:focus-visible,
+.toggle-row:focus-within,
+.control input[type="range"]:focus-visible,
+#timeline-scrubber:focus-visible,
+.modal-card button:focus-visible {
+  outline: 3px solid var(--focus-ring-color);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px var(--focus-ring-shadow);
+}
+
+.select-control select,
+.number-input,
+.toggle-row,
+.control input[type="range"],
+#timeline-scrubber {
+  border-color: var(--contrast-line);
+}
+
+.control input[type="range"]::-webkit-slider-thumb {
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(7, 16, 23, 0.95);
+}
+
+.toggle-row input,
+.toggle-input {
+  width: 22px;
+  height: 22px;
+}
+
+.hud-badge[data-badge-kind],
+.panel-tag[data-status-cue],
+.annotation[data-status-cue],
+.metric-card[data-status-cue] {
+  position: relative;
+}
+
+.hud-badge[data-badge-kind]::before,
+.panel-tag[data-status-cue]::before,
+.annotation[data-status-cue]::before,
+.metric-card[data-status-cue]::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.35rem;
+  min-height: 1.35rem;
+  margin-right: 0.45rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+}
+
+.hud-badge[data-badge-kind="phase"]::before {
+  content: "PH";
+}
+
+.hud-badge[data-badge-kind="camera"]::before {
+  content: "CM";
+}
+
+.hud-badge[data-badge-kind="overlay"]::before {
+  content: "OV";
+}
+
+.panel-tag[data-status-cue="scope"]::before {
+  content: "UI";
+}
+
+.annotation[data-status-cue="injection"]::before {
+  content: "IN";
+}
+
+.annotation[data-status-cue="clot"]::before {
+  content: "CL";
+}
+
+.annotation[data-status-cue="field"]::before {
+  content: "FD";
+}
+
+.metric-card[data-status-cue]::before {
+  content: attr(data-status-cue);
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  margin-right: 0;
+  min-width: auto;
+  padding: 0 0.4rem;
+  opacity: 0.86;
+}
+
+[data-status-tone="neutral"] {
+  border-style: solid;
+}
+
+[data-status-tone="active"] {
+  border-style: double;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 45%),
+    linear-gradient(135deg, rgba(126, 230, 225, 0.14), transparent 70%);
+}
+
+[data-status-tone="success"] {
+  border-color: var(--status-ok-line);
+  background-color: var(--status-ok-bg);
+}
+
+[data-status-tone="success"]::after {
+  content: "OK";
+  font-weight: 700;
+  margin-left: 0.45rem;
+}
+
+[data-status-tone="alert"] {
+  border-color: var(--status-alert-line);
+  background-color: var(--status-alert-bg);
+  border-style: dashed;
+}
+
+[data-status-tone="alert"]::after {
+  content: "!";
+  font-weight: 700;
+  margin-left: 0.45rem;
+}
+
+.metric-label,
+.control-meta,
+.select-control,
+.timeline-label,
+.shortcut-hint,
+.title-note,
+.heart-caption,
+.zoom-indicator,
+.meta-row,
+.toggle-row {
+  color: #c8ece8;
+}
+
+.action-button,
+.ghost-button,
+.select-control select,
+.number-input,
+.metric-card,
+.meta-row,
+.panel-section,
+.modal-card {
+  border-color: var(--contrast-line);
+}
